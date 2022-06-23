@@ -8,6 +8,22 @@ public class App
 
     private final String message = "Hello World!";
 
+    }
+
+    private final String getMessage() {
+        return message;
+    }
+
+}
+
+/**
+ * Hello world!
+ */
+public class App
+{
+
+    private final String message = "Hello World!";
+
     public App() {}
 
     public static void main(String[] args) {
