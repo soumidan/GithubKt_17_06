@@ -1,3 +1,5 @@
+package com.mycompany.app;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import org.junit.Before;
@@ -32,6 +34,26 @@ public class AppTest
     @After
     public void cleanUpStreams() {
         System.setOut(null);
+    }
+
+}
+
+/**
+ * Hello world!
+ */
+public class App
+{
+
+    private final String message = "Hello World!";
+
+    public App() {}
+
+    public static void main(String[] args) {
+        System.out.println(new App().getMessage());
+    }
+
+    private final String getMessage() {
+        return message;
     }
 
 }
