@@ -1,2 +1,1 @@
-# GithubKt_17_06
-GithubKt_17_06
+It's a feature branch
