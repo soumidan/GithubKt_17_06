@@ -21,28 +21,39 @@ public class AppTest
     }
 
     @Test
-    public void testAppConstructor() {
-        try {
-            new App();
-        } catch (Exception e) {
-            fail("Construction failed.");
-        }
-    }
-
-    @Test
     public void testAppMain()
     {
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
         } catch (AssertionError e) {
-            fail("\"message\" is not \"Hello World!\"");
+            fail("\"message\" is not similar to \"Hello World!\"");
         }
     }
 
     @After
     public void cleanUpStreams() {
         System.setOut(null);
+    }
+
+}
+
+/**
+ * Hello world!
+ */
+public class App
+{
+
+    private final String message = "Hello World!";
+
+    public App() {}
+
+    public static void main(String[] args) {
+        System.out.println(new App().getMessage());
+    }
+
+    private final String getMessage() {
+        return message;
     }
 
 }
